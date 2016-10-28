@@ -1,0 +1,33 @@
+<!--
+  Generated template for the AccountPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Account</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+
+    <ion-avatar>
+      <img *ngIf="!user.picture" src="assets/img/default.png">
+      <img *ngIf="user.picture" src="{{user.picture}}">
+    </ion-avatar>
+
+    <ion-item>
+      <button full (click)="updatePicture()">Change Picture</button>
+    </ion-item>
+
+    <a ion-item primary (click)="logout()">Logout</a>
+
+  </ion-list>
+
+</ion-content>
